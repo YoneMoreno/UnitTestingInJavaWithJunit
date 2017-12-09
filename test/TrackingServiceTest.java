@@ -1,5 +1,6 @@
 import org.junit.*;
 import org.junit.rules.ExpectedException;
+import org.junit.rules.Timeout;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.*;
@@ -65,7 +66,10 @@ public class TrackingServiceTest {
         trackingService.setGoal(-1000);
     }
 
-    @Test(timeout = 200)
+    @Rule
+    public Timeout timeout = new Timeout(20);
+
+    @Test
     public void givenLoopExpectedTimeOut() {
         for (int i = 0; i < 1000000000; i++) {
             trackingService.addProtein(1);
