@@ -1,10 +1,6 @@
 import org.junit.*;
-import org.junit.Test;
-import org.junit.experimental.categories.Category;
+import org.junit.rules.ExpectedException;
 
-import static org.hamcrest.CoreMatchers.allOf;
-import static org.hamcrest.CoreMatchers.instanceOf;
-import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 public class TrackingServiceTest {
@@ -34,24 +30,21 @@ public class TrackingServiceTest {
     }
 
     @Test
-    @Category(GoodTestsCategory.class)
     public void NewTrackingServiceTotalIsZero() {
         assertEquals(0, trackingService.getTotal());
     }
 
     @Test
-    @Category(GoodTestsCategory.class)
+    @Ignore
     public void ProteinIsAddedToTheTotal() {
 
 
         trackingService.addProtein(10);
 
-
-        assertThat(trackingService.getTotal(), allOf(is(10), instanceOf(Integer.class)));
+        assertEquals(10, trackingService.getTotal());
     }
 
     @Test
-    @Category(GoodTestsCategory.class)
     public void GivenProteinRemovalExpectedTotalWillBeZero() {
 
         trackingService.removeProtein(5);
@@ -59,13 +52,19 @@ public class TrackingServiceTest {
         assertEquals(0, trackingService.getTotal());
     }
 
-    @Test(expected = InvalidGoalException.class)
+    @Rule
+    public ExpectedException thrown = ExpectedException.none();
+
+
+
+    @Test
     public void givenGoalIsSetToLessThanZeroExceptionIsThrown() throws InvalidGoalException {
+        thrown.expect(InvalidGoalException.class);
+        thrown.expectMessage("Goal was less than 0");
         trackingService.setGoal(-1000);
     }
 
     @Test(timeout = 200)
-    @Category({GoodTestsCategory.class, BadCategory.class})
     public void givenLoopExpectedTimeOut() {
         for (int i = 0; i < 1000000000; i++) {
             trackingService.addProtein(1);
