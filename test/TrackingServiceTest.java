@@ -7,12 +7,12 @@ public class TrackingServiceTest {
     private TrackingService trackingService;
 
     @BeforeClass
-    public static void init(){
+    public static void init() {
         System.out.println("Before Class");
     }
 
     @AfterClass
-    public static void exit(){
+    public static void exit() {
         System.out.println("After Class");
     }
 
@@ -24,18 +24,18 @@ public class TrackingServiceTest {
 
     @After
 
-    public void tearDown(){
+    public void tearDown() {
         System.out.println("After");
     }
 
     @Test
-    public void NewTrackingServiceTotalIsZero(){
+    public void NewTrackingServiceTotalIsZero() {
         assertEquals(0, trackingService.getTotal());
     }
 
     @Test
     @Ignore
-    public void ProteinIsAddedToTheTotal(){
+    public void ProteinIsAddedToTheTotal() {
 
 
         trackingService.addProtein(10);
@@ -44,16 +44,23 @@ public class TrackingServiceTest {
     }
 
     @Test
-    public void GivenProteinRemovalExpectedTotalWillBeZero(){
+    public void GivenProteinRemovalExpectedTotalWillBeZero() {
 
         trackingService.removeProtein(5);
 
-        assertEquals(0,trackingService.getTotal());
+        assertEquals(0, trackingService.getTotal());
     }
 
     @Test(expected = InvalidGoalException.class)
     public void givenGoalIsSetToLessThanZeroExceptionIsThrown() throws InvalidGoalException {
         trackingService.setGoal(-1000);
+    }
+
+    @Test(timeout = 200)
+    public void givenLoopExpectedTimeOut() {
+        for (int i = 0; i < 1000000000; i++) {
+            trackingService.addProtein(1);
+        }
     }
 
 }
