@@ -1,5 +1,6 @@
 import org.junit.*;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import static org.junit.Assert.*;
 
@@ -30,12 +31,13 @@ public class TrackingServiceTest {
     }
 
     @Test
+    @Category(GoodTestsCategory.class)
     public void NewTrackingServiceTotalIsZero() {
         assertEquals(0, trackingService.getTotal());
     }
 
     @Test
-
+    @Category(GoodTestsCategory.class)
     public void ProteinIsAddedToTheTotal() {
 
 
@@ -45,6 +47,7 @@ public class TrackingServiceTest {
     }
 
     @Test
+    @Category(GoodTestsCategory.class)
     public void GivenProteinRemovalExpectedTotalWillBeZero() {
 
         trackingService.removeProtein(5);
@@ -58,6 +61,7 @@ public class TrackingServiceTest {
     }
 
     @Test(timeout = 200)
+    @Category({GoodTestsCategory.class, BadCategory.class})
     public void givenLoopExpectedTimeOut() {
         for (int i = 0; i < 1000000000; i++) {
             trackingService.addProtein(1);
