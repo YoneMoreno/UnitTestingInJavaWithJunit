@@ -2,6 +2,9 @@ import org.junit.*;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
+import static org.hamcrest.CoreMatchers.allOf;
+import static org.hamcrest.CoreMatchers.instanceOf;
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 public class TrackingServiceTest {
@@ -43,7 +46,8 @@ public class TrackingServiceTest {
 
         trackingService.addProtein(10);
 
-        assertEquals(10, trackingService.getTotal());
+
+        assertThat(trackingService.getTotal(), allOf(is(10), instanceOf(Integer.class)));
     }
 
     @Test
