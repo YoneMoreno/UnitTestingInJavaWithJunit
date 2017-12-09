@@ -23,6 +23,7 @@ public class TrackingServiceTest {
     }
 
     @After
+
     public void tearDown(){
         System.out.println("After");
     }
@@ -33,6 +34,7 @@ public class TrackingServiceTest {
     }
 
     @Test
+    @Ignore
     public void ProteinIsAddedToTheTotal(){
 
 
@@ -48,4 +50,10 @@ public class TrackingServiceTest {
 
         assertEquals(0,trackingService.getTotal());
     }
+
+    @Test(expected = InvalidGoalException.class)
+    public void givenGoalIsSetToLessThanZeroExceptionIsThrown() throws InvalidGoalException {
+        trackingService.setGoal(-1000);
+    }
+
 }

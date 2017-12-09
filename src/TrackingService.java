@@ -7,16 +7,14 @@ public class TrackingService {
     private List<HistoryItem> history = new ArrayList<HistoryItem>();
     private int historyId = 0;
 
-    public void addProtein(int amount)
-    {
+    public void addProtein(int amount) {
         total += amount;
         history.add(new HistoryItem(historyId++, amount, "add", total));
     }
 
-    public void removeProtein(int amount)
-    {
+    public void removeProtein(int amount) {
         total -= amount;
-        if(total < 0)
+        if (total < 0)
             total = 0;
 
         history.add(new HistoryItem(historyId++, amount, "subtract", total));
@@ -26,8 +24,10 @@ public class TrackingService {
         return total;
     }
 
-    public void setGoal(int value) {
-        goal = value;
+    public void setGoal(int value) throws InvalidGoalException {
+        if (value < 0)
+            throw new InvalidGoalException();
+            goal = value;
     }
 
     public boolean isGoalMet() {
