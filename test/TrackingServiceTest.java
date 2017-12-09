@@ -1,6 +1,7 @@
 import org.junit.*;
 import org.junit.rules.ExpectedException;
 
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.*;
 
 public class TrackingServiceTest {
@@ -60,7 +61,7 @@ public class TrackingServiceTest {
     @Test
     public void givenGoalIsSetToLessThanZeroExceptionIsThrown() throws InvalidGoalException {
         thrown.expect(InvalidGoalException.class);
-        thrown.expectMessage("Goal was less than 0");
+        thrown.expectMessage(containsString("goal"));
         trackingService.setGoal(-1000);
     }
 
