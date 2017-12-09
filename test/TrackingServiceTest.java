@@ -20,4 +20,13 @@ public class TrackingServiceTest {
 
         assertEquals(10, trackingService.getTotal());
     }
+
+    @Test
+    public void GivenProteinRemovalExpectedTotalWillBeZero(){
+        TrackingService trackingService = new TrackingService();
+
+        trackingService.removeProtein(5);
+
+        assertEquals(0,trackingService.getTotal());
+    }
 }

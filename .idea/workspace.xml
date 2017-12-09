@@ -193,6 +193,26 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="TrackingServiceTest.GivenProteinRemovalExpectedTotalWillBeZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="junit" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TrackingServiceTest" />
+      <option name="METHOD_NAME" value="GivenProteinRemovalExpectedTotalWillBeZero" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
     <configuration name="TrackingServiceTest.NewTrackingServiceTotalIsZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="junit" />
@@ -314,16 +334,18 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="JUnit.TrackingServiceTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.TrackingServiceTest.test" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.TrackingServiceTest.NewTrackingServiceTotalIsZero" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TrackingServiceTest.GivenProteinRemovalExpectedTotalWillBeZero" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="JUnit.TrackingServiceTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TrackingServiceTest.NewTrackingServiceTotalIsZero" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TrackingServiceTest.test" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TrackingServiceTest.GivenProteinRemovalExpectedTotalWillBeZero" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TrackingServiceTest.NewTrackingServiceTotalIsZero" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TrackingServiceTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -346,6 +368,12 @@
   <component name="TestHistory">
     <history-entry file="TrackingServiceTest - 2017.12.09 at 14h 12m 07s.xml">
       <configuration name="TrackingServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TrackingServiceTest - 2017.12.09 at 14h 28m 15s.xml">
+      <configuration name="TrackingServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TrackingServiceTest_GivenProteinRemovalExpectedTotalWillBeZero - 2017.12.09 at 14h 32m 47s.xml">
+      <configuration name="TrackingServiceTest.GivenProteinRemovalExpectedTotalWillBeZero" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TrackingServiceTest_NewTrackingServiceTotalIsZero - 2017.12.09 at 14h 23m 14s.xml">
       <configuration name="TrackingServiceTest.NewTrackingServiceTotalIsZero" configurationId="JUnit" />
@@ -373,9 +401,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23845008" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23845008" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34260616" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
